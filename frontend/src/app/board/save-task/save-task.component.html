@@ -1,0 +1,34 @@
+<div class="form">
+    <mat-card class="card">
+      <mat-card-title>Save task</mat-card-title>
+      <mat-card-content>
+        <div class="container">
+          <mat-form-field>
+            <input
+              [(ngModel)]="taskData.name"
+              matInput
+              autofocus
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <textarea
+              [(ngModel)]="taskData.description"
+              type="text"
+              matInput
+              placeholder="Description"
+              required
+            ></textarea>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="saveTask()" class="button" mat-raised-button>
+          Save
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
